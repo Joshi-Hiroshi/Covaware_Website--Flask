@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/static/img/cowaware_icon.png">
+    <link rel="icon" href="/static/img/covaware_icon.png">
     <title>
         {% block title %}
           
@@ -18,9 +18,18 @@
 
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light py-3 ">
+        <a class="navbar-brand text-uppercase font-weight-bold" href="">
+          <img src="{{url_for('static' , filename='/img/covaware_icon.png')}}" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+          Covaware
+        </a>
+      </nav>
+
+
+
+    <!--Main content after navbar-->  
     <div class="container">
-
-
+        <br>
     <!--Content of each different webpage starts from here-->
     {% block content %}
 
@@ -33,4 +42,16 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+
+<script>
+    $(function () {
+    $(window).on('scroll', function () {
+        if ( $(window).scrollTop() > 10 ) {
+            $('.navbar').addClass('active');
+        } else {
+            $('.navbar').removeClass('active');
+        }
+    });
+});
+</script>
 </html>
