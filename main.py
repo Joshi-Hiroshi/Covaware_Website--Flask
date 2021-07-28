@@ -28,4 +28,8 @@ def world_wide():
 
     return render_template('worldwide.html', list_data=data_json)
 
+@app.route("/about")
+def about_page():
+    return render_template("about.html")
+
 app.run(debug=True)
