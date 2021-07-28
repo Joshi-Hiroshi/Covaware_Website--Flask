@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+
+{% block title %}
+About Us
+{% endblock %}
+
+{% block extrajs %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.social-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: #555;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bg-light py-5 text-center">
+    <div class="container py-5">
+      <div class="mb-4" style="text-align: center;">
+        <div class="lg-5" style="text-align: center;">
+            <h2 class="display-4 font-weight-light text-center" style="text-align: center;">
+                Our team
+            </h2>
+            <p class="font-italic text-muted">
+                Umm hi....we worked very hard..so give us compliments
+            </p>
+        </div>
+      </div>
+  
+      <div class="row text-center">
+        <!-- Card for one person begins-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4">
+            <span class="rounded-circle">
+                <i  class="fa fa-circle-o" aria-hidden="true" style="border:whitesmoke; color: linen;"></i>
+            </span>
+            <h5 class="mb-0">
+                Rudra Pandit
+            </h5>
+            <span class="small text-uppercase text-muted">
+                CEO - Founder
+            </span>
+            <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item">
+                  <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
+                </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End of card -->
+  
+        <!-- Card for one person begins-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4">
+              <span class="rounded-circle">
+                  <i  class="fa fa-circle-o" aria-hidden="true" style="border:whitesmoke; color: linen;"></i>
+              </span>
+              <h5 class="mb-0">
+                  Vishnu Joshi
+              </h5>
+              <span class="small text-uppercase text-muted">
+                someone
+              </span>
+              <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
+                  </li>
+              </ul>
+            </div>
+        </div>
+          <!-- End of card -->
+    
+  
+        <!-- Card for one person begins-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4">
+              <span class="rounded-circle">
+                  <i  class="fa fa-circle-o" aria-hidden="true" style="border:whitesmoke; color: linen;"></i>
+              </span>
+              <h5 class="mb-0">
+                  Arani Jain
+              </h5>
+              <span class="small text-uppercase text-muted">
+                  Creativity in charge idk
+              </span>
+              <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
+                  </li>
+              </ul>
+            </div>
+        </div>
+        <!-- End of card -->
+
+
+        <!-- Card for one person begins-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4">
+              <span class="rounded-circle">
+                  <i  class="fa fa-circle-o" aria-hidden="true" style="border:whitesmoke; color: linen;"></i>
+              </span>
+              <h5 class="mb-0">
+                    Nithilan Poonkundran
+              </h5>
+              <span class="small text-uppercase text-muted">
+                  idk
+              </span>
+              <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
+                  </li>
+              </ul>
+            </div>
+        </div>
+          <!-- End of card -->
+    
+      </div>
+    </div>
+</div>
+{% endblock %}
