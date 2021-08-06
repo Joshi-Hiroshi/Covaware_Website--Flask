@@ -37,7 +37,26 @@
                     <a class="nav-link  font-weight-bold" href="{{url_for('home')}}">Home <span class="sr-only">(current)</span></a>
                 </li>
 
-                <a class="nav-item nav-link font-weight-bold" href="/world_map">World Map</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link  font weight-bold" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Covid Info
+                    </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">About Covid-19</a>
+                            <a class="dropdown-item" href="#">Symptoms</a>
+                            <a class="dropdown-item" href="#">Precautions</a>
+                            <a class="dropdown-item" href="#">Myths related to COVID-19</a>
+                            <a class="dropdown-item" href="#">Vaccine related info</a>
+                                
+                            <hr class="dropdown-divider">
+                                
+                            <a class="dropdown-item" href="#">Stuff to do during lockdown</a>
+                            <a class="dropdown-item" href="/world_map">World Map (beta)</a>
+    
+                        </div>
+                </li>
+
+                <a class="nav-item nav-link font-weight-bold" href="/covid/cases">Covid Cases</a>
                 <a class="nav-item nav-link font-weight-bold" href="/about">About Us</a>
                 <a class="nav-item nav-link font-weight-bold" href="https://docs.google.com/forms/d/e/1FAIpQLSe_4Kl7uXjfGlZgNNEJ_IXsTdQ9whBaAvjFBHsdtkPOqjRriA/viewform?usp=sf_link" target="_blank" rel="noreferrer">Feedback form</a>
 
@@ -69,6 +88,9 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+{% block endjs %}
+
+{% endblock %}
 
 <script>
     $(function () {
