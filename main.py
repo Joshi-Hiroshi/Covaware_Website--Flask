@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect , flash , url_for,json,jsonify
 import data_file
+import requests
 
 app=Flask(__name__)
 app.config['SECRET_KEY'] = 'babaBlackSheep$123'
@@ -27,6 +28,35 @@ def world_wide():
     # print(index[0:2], type(index))
 
     return render_template('worldwide.html', list_data=data_json)
+
+@app.route("/covid/cases")
+def covid_cases():
+    from data_render import daywise_data_world
+    data = daywise_data_world()
+    
+    return render_template("covid_cases.html" , data = data )
+
+@app.route("/covid/india", methods = ["POST", "GET"])
+def india():
+
+    from data_render import daywise_data_india
+    india_plot_daywise_data = daywise_data_india()
+    day = india_plot_daywise_data[0]
+    confirmed = india_plot_daywise_data[1]
+    deaths = india_plot_daywise_data[2]
+
+    from data_render import statewise_analysis
+    statewise_data = statewise_analysis()
+
+    india_data_url = "https://disease.sh/v2/countries/India?yesterday=true&strict=true"
+    india_content = requests.get(india_data_url)
+    india_data = india_content.json()
+
+    #from data_render import district_zone_analysis
+    #states_district_zone_data = district_zone_analysis()
+    #district_data = states_district_zone_data
+
+    return render_template("india.html", data = india_data, day = day, confirmed = confirmed, deaths = deaths, states = statewise_data)
 
 @app.route("/about")
 def about_page():
