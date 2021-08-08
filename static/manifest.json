@@ -1,0 +1,18 @@
+{
+    "name": "Covaware Desktop App",
+    "short_name": "Covaware",
+    "icons": [
+        {
+            "src": "/static/img/covaware_icon_transparent.png",
+            "type": "image/png",
+            "sizes":"512x512",
+            "purpose": "any maskable"
+
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#317EFB",
+    "background_color" : "#fff"
+  }
