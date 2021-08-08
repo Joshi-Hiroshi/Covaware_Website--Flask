@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect , flash , url_for,json,jsonify
 import data_file
 import requests
+from flask_sitemap import Sitemap
+
 
 app=Flask(__name__)
 app.config['SECRET_KEY'] = 'babaBlackSheep$123'
@@ -62,4 +64,18 @@ def india():
 def about_page():
     return render_template("about.html")
 
-app.run(debug=True)
+@ext.register_generator
+def sitemap():
+    yield 'home' , {}
+    yield 'india' , {}
+    yield 'covid_cases', {}
+    yield 'abt_covid',{}
+    yield 'symptoms',{}
+    yield 'precautions',{}
+    yield 'myths',{}
+    yield 'vaccines',{}
+    yield 'stuff',{}
+    yield 'about_page' ,{}
+    yield 'world_wide',{}
+
+#app.run(debug=True)
