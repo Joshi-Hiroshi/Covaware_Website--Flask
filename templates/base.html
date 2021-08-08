@@ -19,6 +19,15 @@
           
     {% endblock %}
 
+    <!--PWA-->
+    <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon"                       href="/static/images/logo.png">
+    <meta name="apple-mobile-web-app-capable"          content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection"                      content="telephone=no">
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light py 3">
@@ -91,6 +100,14 @@
 {% block endjs %}
 
 {% endblock %}
+
+<script async>
+  if (!navigator.serviceWorker.controller) {
+      navigator.serviceWorker.register("/service-worker.js", {scope: '/'}).then(function(reg) {
+          console.log("Service worker has been registered for scope: " + reg.scope);
+      });
+  }
+ </script>
 
 <script>
     $(function () {
