@@ -64,6 +64,30 @@ def india():
 def about_page():
     return render_template("about.html")
 
+@app.route("/about-covid")
+def abt_covid():
+    return render_template("about_covid.html")
+
+@app.route("/symptoms")
+def symptoms():
+    return render_template("symptoms.html")
+
+@app.route("/precautions")
+def precautions():
+    return render_template("precautions.html")
+
+@app.route('/myths')
+def myths():
+    return render_template("myths.html")
+
+@app.route("/vaccines")
+def vaccines():
+    return render_template("vaccineinfo.html")
+
+@app.route("/stuff-to-do-during-lockdown")
+def stuff():
+    return render_template("stuff_to_do_during_lockdown.html")
+
 @ext.register_generator
 def sitemap():
     yield 'home' , {}
